@@ -7,7 +7,7 @@ export class LoginService {
 
   constructor() { }
 
-  // Modules, observables, and RxJS operators.
+  // Modules, ClientHTTP ,observables, and RxJS operators.
 
   // login
 
