@@ -1,1 +1,16 @@
-<p>login-form works!</p>
+<form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
+    <div class="mb-3 grid justify-items-stretch ">
+    <fieldset class="mb-3 grid justify-self-center ">
+        <label for="username" 
+        class="block mb-3 ">Username</label>
+
+        <input type="text" name="username" id="username"
+        ngModel
+        #username="ngModel"
+        class="block border border-slate-600 rounded px-3 p-2" placeholder="Steve">
+
+    </fieldset>
+
+    <button type="submit" class="bg-blue-800 rounded px-20 p-2 justify-self-center text-slate-200" >Login</button>
+</div>
+</form>

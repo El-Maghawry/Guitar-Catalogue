@@ -15,6 +15,7 @@ export class LoginService {
   constructor(private readonly http: HttpClient) { }
 
   // Modules, ClientHTTP ,observables, and RxJS operators.
+  // login
   public login(username: string): Observable<User> {
     return this.checkUsername(username)
     .pipe(
@@ -27,8 +28,6 @@ export class LoginService {
       })
     )
   }
-
-  // login
 
   //check if user exists
   private checkUsername(username: string): Observable<User | undefined>{

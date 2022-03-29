@@ -8,6 +8,7 @@ import { LoginPage } from './pages/login/login.page';
 import { GuitarCataloguePage } from './pages/guitar-catalogue/guitar-catalogue.page';
 import { ProfilePage } from './pages/profile/profile.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
   imports: [ // modules go here
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
