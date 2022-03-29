@@ -7,6 +7,12 @@ import { ProfilePage } from "./profile/profile.page";
 const routes: Routes = [
     {
         path: "",
+        pathMatch: "full",
+        redirectTo: "/login"
+
+    },
+    {
+        path: "login",
         component: LoginPage
     },
     {
