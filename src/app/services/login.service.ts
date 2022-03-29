@@ -7,6 +7,8 @@ export class LoginService {
 
   constructor() { }
 
+  // Modules, observables, and RxJS operators.
+
   // login
 
   //check if user exists

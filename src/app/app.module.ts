@@ -11,15 +11,16 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 
 
 @NgModule({
-  declarations: [
+  declarations: [ // components
     AppComponent,
     LoginPage,
     GuitarCataloguePage,
     ProfilePage,
     LoginFormComponent
   ],
-  imports: [
+  imports: [ // modules go here
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
