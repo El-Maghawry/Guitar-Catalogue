@@ -11,6 +11,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { FormsModule } from '@angular/forms';
 import { GuitarListComponent } from './components/guitar-list/guitar-list.component';
 import { GuitarListItemComponent } from './components/guitar-list-item/guitar-list-item.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { GuitarListItemComponent } from './components/guitar-list-item/guitar-li
     ProfilePage,
     LoginFormComponent,
     GuitarListComponent,
-    GuitarListItemComponent
+    GuitarListItemComponent,
+    NavbarComponent
   ],
   imports: [ // modules go here
     BrowserModule,
