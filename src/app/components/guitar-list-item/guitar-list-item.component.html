@@ -1,6 +1,7 @@
-<li *ngIf="guitar" class="mb-5 shadow-lg">
+<li *ngIf="guitar" class="mb-5 shadow-lg bg-white rounded relative">
     <section class="p-4">
         <img [src]="guitar.image" [alt]="guitar.model" class="block w-96">
+        <app-favourite-guitar-button [guitarId]="guitar.id"></app-favourite-guitar-button>
     </section>
     <section class="p-4">
         <span class="text-xl">{{ guitar.model }} by {{ guitar.manufacturer }}</span>
