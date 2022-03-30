@@ -1,0 +1,17 @@
+<li *ngIf="guitar" class="mb-5 shadow-lg">
+    <section class="p-4">
+        <img [src]="guitar.image" [alt]="guitar.model" class="block w-96">
+    </section>
+    <section class="p-4">
+        <span class="text-xl">{{ guitar.model }} by {{ guitar.manufacturer }}</span>
+        <span class="block">Body: {{ guitar.bodyType }}</span>
+    </section>
+    <section class="p-4">
+        <span class="block text-xl mt-1 mb-1">Materials</span>
+        <ul>
+            <li>Neck: {{ guitar.materials.neck }}</li>
+            <li>Fretboard: {{ guitar.materials.fretboard }}</li>
+            <li>Body: {{ guitar.materials.body }}</li>
+        </ul>
+    </section>
+</li>

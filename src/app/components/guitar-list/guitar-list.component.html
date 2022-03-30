@@ -1,5 +1,6 @@
 <ul>
-    <li *ngFor="let guitar of guitars">
-        <span>{{ guitar.model }} by {{ guitar.manufacturer }}</span>
-    </li>
+    <app-guitar-list-item 
+    *ngFor="let guitar of guitars"
+    [guitar]="guitar"
+    ></app-guitar-list-item>
 </ul>

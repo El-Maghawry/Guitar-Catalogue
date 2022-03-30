@@ -10,6 +10,7 @@ import { ProfilePage } from './pages/profile/profile.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
 import { GuitarListComponent } from './components/guitar-list/guitar-list.component';
+import { GuitarListItemComponent } from './components/guitar-list-item/guitar-list-item.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { GuitarListComponent } from './components/guitar-list/guitar-list.compon
     GuitarCataloguePage,
     ProfilePage,
     LoginFormComponent,
-    GuitarListComponent
+    GuitarListComponent,
+    GuitarListItemComponent
   ],
   imports: [ // modules go here
     BrowserModule,
