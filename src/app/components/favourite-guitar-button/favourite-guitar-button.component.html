@@ -2,7 +2,15 @@
     <button 
     class="border border-slate-300 p-2 rounded flex text-red-400"
     (click)="onFavoriteClick()">
-        
-        <span class="material-icons">favorite_border</span>
+
+   
+        <ng-container *ngIf="isFavourite; then favourite else notFavourite" class="material-icons"></ng-container>
+            <ng-template #favourite>
+                <span class="material-icons">favorite</span>
+            </ng-template>
+            <ng-template #notFavourite>
+                <span class="material-icons">favorite_border</span>
+            </ng-template>
+
     </button>
 </aside>

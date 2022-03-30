@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/Models/user.model';
 import { FavouriteService } from 'src/app/services/favourite.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-favourite-guitar-button',
@@ -10,6 +11,7 @@ import { FavouriteService } from 'src/app/services/favourite.service';
 })
 export class FavouriteGuitarButtonComponent implements OnInit {
 
+  public isFavourite: boolean = false;
   @Input() guitarId: string = "";
 
   get loading(): boolean {
@@ -17,10 +19,13 @@ export class FavouriteGuitarButtonComponent implements OnInit {
   }
 
   constructor(
+    private readonly userSerivce: UserService,
     private readonly favouriteService: FavouriteService
   ) { }
 
   ngOnInit(): void {
+    // inputs are resolved!
+    this.isFavourite = this.userSerivce.inFavourites(this.guitarId);
   }
 
   onFavoriteClick(): void {
