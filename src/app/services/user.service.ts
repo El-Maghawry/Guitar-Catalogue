@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StorageKeys } from '../enum/storage-keys.enum';
+import { Guitar } from '../Models/guitar.model';
 import { User } from '../Models/user.model';
 import { StorageUtil } from '../utils/storage.util';
 
@@ -7,18 +8,26 @@ import { StorageUtil } from '../utils/storage.util';
   providedIn: 'root'
 })
 export class UserService {
+
   private _user?: User;
 
   public get user(): User | undefined {
     return this._user;
   }
+
   set user(user: User | undefined) {
     StorageUtil.storageSave<User>(StorageKeys.User, user!);
     this._user = user;
   }
 
   constructor() { 
-    const storedUser: User | undefined = StorageUtil.storageRead<User>(StorageKeys.User);
-    this._user = storedUser;
+    this._user = StorageUtil.storageRead<User>(StorageKeys.User);
+  }
+
+  public inFavourites(guitarId: string): boolean{
+    if (this._user) {
+      return Boolean(this.user?.favourites.find((guitar: Guitar) => guitar.id === guitarId));
+  }
+    return false;
   }
 }
