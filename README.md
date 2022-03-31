@@ -1,27 +1,13 @@
-# DemoAngular
+# Guitar Catalogue
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+[![web](https://img.shields.io/static/v1?logo=heroku&message=Online&label=Heroku&color=430098)](https://guitar-catalogue.herokuapp.com/)
 
-## Development server
+## Background
+Simple project using the Angular framework, this is part of my effort to get to know the framework properly to be comfortable working with it professionally. The build has a login page, a guitar catalogue and the ability to save guitars from the catalogue to the profile page. On the profile page guitars can also be removed. Feel free to try out (https://guitar-catalogue.herokuapp.com/). I might return to this project in the future to add more functionality.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Credit
+- Courtesy to Noroff for providing the tutorials and information needed to complete this build.
+- Mohammed EL Maghawry 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
