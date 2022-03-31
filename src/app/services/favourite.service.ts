@@ -38,7 +38,9 @@ public addToFavourites(guitarId: string): Observable<User> {
     throw new Error(`addToFavourites: No guitar with id: ` + guitarId)
   }
   if (this.userService.inFavourites(guitarId)) {
-    throw new Error("addToFavourites: Guitar already in favourites.")
+    this.userService.removeFromFavourites(guitarId);
+  } else{
+    this.userService.addToFavourites(guitar);
   }
   const headers = new HttpHeaders({
     'content-type': 'application/json',
@@ -47,7 +49,7 @@ public addToFavourites(guitarId: string): Observable<User> {
   this._loading = true;
 
   return this.http.patch<User>(`${apiUsers}/${user.id}`, {
-    favourites: [...user.favourites, guitar]
+    favourites: [...user.favourites] // already updated
   }, {
     headers
   })

@@ -32,8 +32,8 @@ export class FavouriteGuitarButtonComponent implements OnInit {
     // add the guitar to the favourites
     this.favouriteService.addToFavourites(this.guitarId)
     .subscribe({
-      next: (response: User) => {
-        console.log("Next", response);
+      next: (user: User) => {
+        this.isFavourite = this.userSerivce.inFavourites(this.guitarId);
       },
       error: (error: HttpErrorResponse) => {
         console.log("Error", error.message)

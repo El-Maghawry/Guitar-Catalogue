@@ -30,4 +30,15 @@ export class UserService {
   }
     return false;
   }
+  public addToFavourites(guitar: Guitar): void {
+    if (this._user) {
+      this._user.favourites.push(guitar);
+    }
+  }
+
+  public removeFromFavourites(guitarId: string): void {
+    if (this._user) {
+      this._user.favourites = this._user?.favourites.filter((guitar: Guitar) => guitar.id !== guitarId);
+    }
+  }
 }
