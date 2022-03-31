@@ -8,6 +8,6 @@ Simple project using the Angular framework, this is part of my effort to get to 
 
 # Credit
 - Courtesy to Noroff for providing the tutorials and information needed to complete this build.
-- Mohammed EL Maghawry 
+- Mohammed El Maghawry 
 
 
