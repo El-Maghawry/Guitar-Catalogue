@@ -31,6 +31,12 @@ export class GuitarCatalogueService {
   constructor(private readonly http: HttpClient) { }
 
   public findAllGuitars(): void {
+
+    if (this._guitars.length > 0 || this.loading){
+      return;
+    }
+
+
     this._loading = true;
     this.http.get<Guitar[]>(apiGuitars)
     .pipe(
