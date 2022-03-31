@@ -3,14 +3,18 @@
     class="border border-slate-300 p-2 rounded flex text-red-400"
     (click)="onFavoriteClick()">
 
-   
+   <ng-container *ngIf="!loading; else showSpinner">
         <ng-container *ngIf="isFavourite; then favourite else notFavourite" class="material-icons"></ng-container>
             <ng-template #favourite>
                 <span class="material-icons">favorite</span>
             </ng-template>
             <ng-template #notFavourite>
                 <span class="material-icons">favorite_border</span>
-            </ng-template>
+        </ng-template>
+    </ng-container>
+    <ng-template #showSpinner>
+        <span class="material-icons animate-spin">refresh</span>
+    </ng-template>
 
     </button>
 </aside>
